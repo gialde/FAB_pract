@@ -1,49 +1,66 @@
  <!DOCTYPE html>
- <html lamg = "ru"> 
-        <head> 
-            <meta charset="UTF-8"> 
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-            <title>Семестровая работа</title> 
-            <link rel="stylesheet" href="../style/styles.css">
-        </head> 
-        <body> 
-            <div id="header">Хэдер</div> 
-            <div id="menu"> 
-                <ul> 
-                    <li><a href="index.html">Главная</a></li> 
-                    <li><a href="pages/news.html">Новости</a></li> 
-                    <li><a href="pages/practices.html">Практики</a></li>  
-                    <li><a href="pages/goods.html">Товары</a></li> 
-                    <li><a href="pages/contacts.html">Контакты</a></li> 
-                </ul> 
-            </div> 
-            <div id="content"> 
-                <p>Информация об авторе</p> 
-                <img src="images/photo.png" alt="Фото автора" width="200" 
-    height="250"> 
-                <p>Кондратенко Денис Павлови</p> 
-                <p>ЭФБО-13-24</p> 
-                <p>А тут могла быть ваша реклама</p> 
-                <div>Навык 1</div> 
-                <div>Навык 2</div> 
-                <div>Навык 3</div> 
-                <div>Навык 4</div> 
-                <div> 
-                    Мой опыт работы: 
-                    <div> 
-                        Опыт 1<br> 
-                        Работал фантазёром. Сочинял и праздновал. 
-                    </div> 
-                    <div> 
-                        Опыт 2<br> 
-                        Работал воровством. Воровал и продавал. 
-                    </div> 
-                    <div> 
-                        Опыт 3<br> 
-                        Работал рэпером. Читал и пел. 
-                    </div> 
-                </div> 
-            </div> 
-            <div id="footer">Футер</div>     
-        </body>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Наш сайт</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="pages/news.html">Новости</a></li>
+            <li><a href="pages/goods.html">Товары</a></li>
+            <li><a href="pages/contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <h2>Информация об авторе</h2>
+        
+        <div class="author-info">
+            <img src="images/photo.png" alt="Фото автора" class="author-photo">
+            <div class="author-details">
+                <h3>Кондратенко Денис Павлович</h3>
+                <p>ЭФБО-13-24</p>
+                <p>А тут могла быть ваша реклама</p>
+            </div>
+        </div>
+
+        <div class="skills-section">
+            <h3>Навыки</h3>
+            <div class="skills-grid">
+                <div class="skill-item">Навык 1</div>
+                <div class="skill-item">Навык 2</div>
+                <div class="skill-item">Навык 3</div>
+                <div class="skill-item">Навык 4</div>
+            </div>
+        </div>
+
+        <div class="experience-section">
+            <h3>Мой опыт работы</h3>
+            <div class="experience-item">
+                <h4>Опыт 1</h4>
+                <p>Работал фантазёром. Сочинял и праздновал.</p>
+            </div>
+            <div class="experience-item">
+                <h4>Опыт 2</h4>
+                <p>Работал воровством. Воровал и продавал.</p>
+            </div>
+            <div class="experience-item">
+                <h4>Опыт 3</h4>
+                <p>Работал рэпером. Читал и пел.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; ЭТО МОЙ САЙТ. Мои права защищены.</p>
+    </footer>
+</body>
 </html>
