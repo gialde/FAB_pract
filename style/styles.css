@@ -43,9 +43,109 @@ nav a:hover {
 
 /* Основной контент */
 .main-content {
-    max-width: 1200px; /* Увеличили для товаров */
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+}
+
+/* Стили для главной страницы */
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.author-photo {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.author-details h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.author-details p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.skills-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.skills-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    background: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+}
+
+.experience-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.experience-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.experience-item {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.experience-item h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item p {
+    color: #666;
+    line-height: 1.5;
 }
 
 /* Стили для страницы товаров */
