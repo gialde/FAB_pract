@@ -4,114 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - Наш сайт</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        
-        /* Хэдер */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        /* Навигация */
-        nav {
-            background-color: #444;
-            padding: 0.5rem;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-        }
-        
-        nav a:hover {
-            background-color: #555;
-            border-radius: 4px;
-        }
-        
-        /* Основной контент */
-        .main-content {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        
-        .contact-info {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .contact-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .contact-label {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-value {
-            color: #666;
-        }
-        
-        .call-button {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .call-button:hover {
-            background-color: #0056b3;
-        }
-        
-        /* Футер */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Хэдер -->
@@ -172,14 +65,12 @@
         </div>
     </main>
 
-    
     <footer>
         <p>&copy; ЭТО МОЙ САЙТ. Мои права защищены.</p>
     </footer>
 
     <script>
         function callUs() {
-            // Можно реализовать обратный звонок или показать номер телефона
             alert('Мы перезвоним вам в ближайшее время! Оставьте ваш номер:');
             const phoneNumber = prompt('Введите ваш номер телефона:');
             if (phoneNumber) {
