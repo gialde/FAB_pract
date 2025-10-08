@@ -7,76 +7,76 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <!-- Хэдер -->
-    <header>
-        <h1>Контакты</h1>
-    </header>
+    <div class="page-container">
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <h1>Контакты</h1>
+        </header>
 
-    <!-- Навигация -->
-    <nav>
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
+        <main class="content">
+            <section class="contacts-section">
+                <h2 class="section-title">Наши контакты</h2>
+                
+                <div class="contact-info">
+                    <article class="contact-item">
+                        <h3 class="contact-label">Электронная почта:</h3>
+                        <div class="contact-value">
+                            <a href="mailto:info@example.com">NOinfo@example.com</a>
+                        </div>
+                    </article>
+                    
+                    <article class="contact-item">
+                        <h3 class="contact-label">Адрес:</h3>
+                        <div class="contact-value">
+                            г. Москва, ул. Пушкина, д. Калатушкина<br>
+                            Бизнес-центр "Защита Древних", офис 228
+                        </div>
+                    </article>
+                    
+                    <article class="contact-item">
+                        <h3 class="contact-label">Телефон:</h3>
+                        <div class="contact-value">
+                            8 800 555 35 35
+                        </div>
+                    </article>
+                    
+                    <article class="contact-item">
+                        <h3 class="contact-label">Режим работы:</h3>
+                        <div class="contact-value">
+                            Пн-Пт: 9:00 - 18:00<br>
+                            Выходных нет
+                        </div>
+                    </article>
+                    
+                    <div class="contact-item">
+                        <button class="call-button" onclick="callUs()">
+                            Позвоните мне
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    <!-- Основной контент -->
-    <main class="main-content">
-        <h2>Наши контакты</h2>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-label">Электронная почта:</div>
-                <div class="contact-value">
-                    <a href="mailto:info@example.com">NOinfo@example.com</a>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-label">Адрес:</div>
-                <div class="contact-value">
-                    г. Москва, ул. Пушкина, д. Калатушкина<br>
-                    Бизнес-центр "Защита Древних", офис 228
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-label">Телефон:</div>
-                <div class="contact-value">
-                    8 800 555 35 35
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-label">Режим работы:</div>
-                <div class="contact-value">
-                    Пн-Пт: 9:00 - 18:00<br>
-                    Выходных нет
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <button class="call-button" onclick="callUs()">
-                    Позвоните мне
-                </button>
-            </div>
-        </div>
-    </main>
+        <footer class="footer">
+            <p>&copy; ЭТО МОЙ САЙТ. Мои права защищены.</p>
+        </footer>
 
-    <footer>
-        <p>&copy; ЭТО МОЙ САЙТ. Мои права защищены.</p>
-    </footer>
-
-    <script>
-        function callUs() {
-            alert('Мы перезвоним вам в ближайшее время! Оставьте ваш номер:');
-            const phoneNumber = prompt('Введите ваш номер телефона:');
-            if (phoneNumber) {
-                alert(`Спасибо! Мы перезвоним на номер ${phoneNumber} в течение 15 минут.`);
+        <script>
+            function callUs() {
+                alert('Мы перезвоним вам в ближайшее время! Оставьте ваш номер:');
+                const phoneNumber = prompt('Введите ваш номер телефона:');
+                if (phoneNumber) {
+                    alert(`Спасибо! Мы перезвоним на номер ${phoneNumber} в течение 15 минут.`);
+                }
             }
-        }
-    </script>
+        </script>
+    </div>
 </body>
 </html>
