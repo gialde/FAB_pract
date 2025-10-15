@@ -67,4 +67,40 @@
         </footer>
     </div>
 </body>
+<!-- Добавьте этот код перед закрывающим тегом </body> на всех страницах -->
+<script>
+    // Переключатель темы
+    document.addEventListener('DOMContentLoaded', function() {
+        // Создаем переключатель темы если его нет
+        if (!document.querySelector('.theme-switcher')) {
+            const themeSwitcher = document.createElement('div');
+            themeSwitcher.className = 'theme-switcher';
+            themeSwitcher.innerHTML = `
+                <button class="theme-switcher__button" aria-label="Переключить тему">
+                    <span class="theme-switcher__icon"></span>
+                </button>
+            `;
+            document.body.appendChild(themeSwitcher);
+        }
+
+        const themeButton = document.querySelector('.theme-switcher__button');
+        const pageContainer = document.querySelector('.page-container');
+        
+        // Проверяем сохраненную тему
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            pageContainer.setAttribute('data-theme', 'dark');
+        }
+
+        themeButton.addEventListener('click', function() {
+            if (pageContainer.getAttribute('data-theme') === 'dark') {
+                pageContainer.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                pageContainer.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    });
+</script>
 </html>
