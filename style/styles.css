@@ -1192,3 +1192,219 @@ body {
         align-items: flex-start;
     }
 }
+/* Стили для страницы практик */
+.practices {
+    margin-bottom: var(--spacing-xl);
+}
+
+.practices__title {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xxl);
+    text-align: center;
+    font-family: var(--font-family-dota);
+    position: relative;
+}
+
+.practices__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+    border-radius: 2px;
+}
+
+.practices__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Блок практической работы */
+.practice-item {
+    background: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    position: relative;
+}
+
+.practice-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.practice-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+}
+
+.practice-item__title {
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+
+.practice-item__status {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-left: var(--spacing-md);
+}
+
+.practice-item__status--completed {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.practice-item__status--in-progress {
+    background: var(--color-warning);
+    color: white;
+}
+
+.practice-item__status--planned {
+    background: var(--color-text-light);
+    color: white;
+}
+
+.practice-item__description {
+    margin-bottom: var(--spacing-md);
+}
+
+.practice-item__description p {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+}
+
+.practice-item__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.practice-item__tech li {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.practice-item__actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.practice-item__link {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.practice-item__link:hover {
+    background: var(--color-dark);
+    transform: translateY(-2px);
+}
+
+.practice-item__link--code {
+    background: var(--color-secondary);
+}
+
+.practice-item__link--code:hover {
+    background: #27ae60;
+}
+
+.practice-item__link--disabled {
+    background: var(--color-text-light);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.practice-item__link--disabled:hover {
+    background: var(--color-text-light);
+    transform: none;
+}
+
+/* Статистика */
+.practices__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.stat-card {
+    background: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-card__value {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-card__label {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+/* Адаптивность для практик */
+@media (max-width: 768px) {
+    .practice-item__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .practice-item__status {
+        margin-left: 0;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .practice-item__actions {
+        flex-direction: column;
+    }
+    
+    .practice-item__link {
+        text-align: center;
+    }
+    
+    .practices__stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

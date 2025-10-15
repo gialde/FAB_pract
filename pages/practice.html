@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практики - Наш сайт</title>
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                    <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="practice.html">Практики</a></li>
+                </ul>
+            </nav>
+            <h1 class="header__title">Практические работы</h1>
+        </header>
+
+        <main class="main">
+            <section class="practices">
+                <h2 class="practices__title">Мои практические работы</h2>
+                
+                <div class="practices__list">
+                    <article class="practice-item">
+                        <div class="practice-item__header">
+                            <h3 class="practice-item__title">Практика 1: Верстка HTML/CSS</h3>
+                            <span class="practice-item__status practice-item__status--completed">Завершено</span>
+                        </div>
+                        <div class="practice-item__description">
+                            <p>Создание семантической верстки с использованием современных CSS технологий.</p>
+                            <ul class="practice-item__tech">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Flexbox</li>
+                                <li>Grid</li>
+                            </ul>
+                        </div>
+                        <div class="practice-item__actions">
+                            <a href="#" class="practice-item__link">Посмотреть работу</a>
+                            <a href="#" class="practice-item__link practice-item__link--code">Исходный код</a>
+                        </div>
+                    </article>
+                    
+                    <article class="practice-item">
+                        <div class="practice-item__header">
+                            <h3 class="practice-item__title">Практика 2: Адаптивный дизайн</h3>
+                            <span class="practice-item__status practice-item__status--in-progress">В процессе</span>
+                        </div>
+                        <div class="practice-item__description">
+                            <p>Разработка адаптивного интерфейса для разных устройств и разрешений экрана.</p>
+                            <ul class="practice-item__tech">
+                                <li>Media Queries</li>
+                                <li>Mobile First</li>
+                                <li>Viewport units</li>
+                            </ul>
+                        </div>
+                        <div class="practice-item__actions">
+                            <a href="#" class="practice-item__link">Посмотреть работу</a>
+                            <a href="#" class="practice-item__link practice-item__link--code">Исходный код</a>
+                        </div>
+                    </article>
+                    
+                    <article class="practice-item">
+                        <div class="practice-item__header">
+                            <h3 class="practice-item__title">Практика 3: JavaScript основы</h3>
+                            <span class="practice-item__status practice-item__status--completed">Завершено</span>
+                        </div>
+                        <div class="practice-item__description">
+                            <p>Изучение основ JavaScript: переменные, функции, DOM manipulation.</p>
+                            <ul class="practice-item__tech">
+                                <li>JavaScript ES6+</li>
+                                <li>DOM API</li>
+                                <li>Event Handling</li>
+                            </ul>
+                        </div>
+                        <div class="practice-item__actions">
+                            <a href="#" class="practice-item__link">Посмотреть работу</a>
+                            <a href="#" class="practice-item__link practice-item__link--code">Исходный код</a>
+                        </div>
+                    </article>
+                    
+                    <article class="practice-item">
+                        <div class="practice-item__header">
+                            <h3 class="practice-item__title">Практика 4: Bootstrap фреймворк</h3>
+                            <span class="practice-item__status practice-item__status--planned">Запланировано</span>
+                        </div>
+                        <div class="practice-item__description">
+                            <p>Освоение Bootstrap для быстрой разработки интерфейсов.</p>
+                            <ul class="practice-item__tech">
+                                <li>Bootstrap 5</li>
+                                <li>Grid System</li>
+                                <li>Components</li>
+                                <li>Utilities</li>
+                            </ul>
+                        </div>
+                        <div class="practice-item__actions">
+                            <a href="#" class="practice-item__link practice-item__link--disabled">Скоро будет</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="practices__stats">
+                    <div class="stat-card">
+                        <div class="stat-card__value">2</div>
+                        <div class="stat-card__label">Завершено</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__value">1</div>
+                        <div class="stat-card__label">В процессе</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__value">1</div>
+                        <div class="stat-card__label">Запланировано</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__value">4</div>
+                        <div class="stat-card__label">Всего работ</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; ЭТО МОЙ САЙТ. Мои права защищены.</p>
+        </footer>
+    </div>
+
+    <!-- Переключатель темы -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Создаем переключатель темы если его нет
+            if (!document.querySelector('.theme-switcher')) {
+                const themeSwitcher = document.createElement('div');
+                themeSwitcher.className = 'theme-switcher';
+                themeSwitcher.innerHTML = `
+                    <button class="theme-switcher__button" aria-label="Переключить тему">
+                        <span class="theme-switcher__icon"></span>
+                    </button>
+                `;
+                document.body.appendChild(themeSwitcher);
+            }
+
+            const themeButton = document.querySelector('.theme-switcher__button');
+            const pageContainer = document.querySelector('.page-container');
+            
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                pageContainer.setAttribute('data-theme', 'dark');
+            }
+
+            themeButton.addEventListener('click', function() {
+                if (pageContainer.getAttribute('data-theme') === 'dark') {
+                    pageContainer.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    pageContainer.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
