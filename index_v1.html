@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,56 @@
         }
         .skill-card:hover {
             transform: translateY(-5px);
+        }
+        
+        /* Темная тема для Bootstrap */
+        [data-bs-theme="dark"] {
+            --bs-body-bg: #1a1a1a;
+            --bs-body-color: #e0e0e0;
+            --bs-light: #2d2d2d;
+            --bs-dark: #1a1a1a;
+        }
+        
+        [data-bs-theme="dark"] .bg-light {
+            background-color: #2d2d2d !important;
+            color: #e0e0e0;
+        }
+        
+        [data-bs-theme="dark"] .card {
+            background-color: #2d2d2d;
+            border-color: #404040;
+        }
+        
+        [data-bs-theme="dark"] .text-muted {
+            color: #a0a0a0 !important;
+        }
+        
+        [data-bs-theme="dark"] .navbar-dark {
+            background-color: #2d3748 !important;
+        }
+        
+        [data-bs-theme="dark"] .bg-primary {
+            background-color: #2c5282 !important;
+        }
+        
+        [data-bs-theme="dark"] .bg-dark {
+            background-color: #1a202c !important;
+        }
+        
+        [data-bs-theme="dark"] .text-primary {
+            color: #63b3ed !important;
+        }
+        
+        [data-bs-theme="dark"] .text-success {
+            color: #68d391 !important;
+        }
+        
+        [data-bs-theme="dark"] .text-info {
+            color: #76e4f7 !important;
+        }
+        
+        [data-bs-theme="dark"] .text-warning {
+            color: #faf089 !important;
         }
     </style>
 </head>
@@ -44,14 +94,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link " href="index.html">
+                            <a class="nav-link" href="index.html">
                                 <i class="bi bi-house me-1"></i>Основная Главная
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="index_v1.html" >
+                            <a class="nav-link active" href="index_v1.html">
                                 <i class="bi bi-newspaper me-1"></i>Альт Главная
                             </a>
                         </li>
@@ -61,6 +111,27 @@
                             </a>
                         </li>
                     </ul>
+                    
+                    <!-- Переключатель темы -->
+                    <div class="navbar-nav">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-palette me-1"></i>Тема
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item theme-switcher" href="#" data-theme="light">
+                                        <i class="bi bi-sun me-2"></i>Светлая
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item theme-switcher" href="#" data-theme="dark">
+                                        <i class="bi bi-moon me-2"></i>Темная
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -220,5 +291,43 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Переключатель темы для Bootstrap
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeSwitchers = document.querySelectorAll('.theme-switcher');
+            const html = document.documentElement;
+            
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('bs-theme') || 'light';
+            html.setAttribute('data-bs-theme', savedTheme);
+            
+            // Обработчики для переключателей темы
+            themeSwitchers.forEach(switcher => {
+                switcher.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const theme = this.getAttribute('data-theme');
+                    html.setAttribute('data-bs-theme', theme);
+                    localStorage.setItem('bs-theme', theme);
+                    
+                    // Обновляем активное состояние в dropdown
+                    themeSwitchers.forEach(item => {
+                        if (item.getAttribute('data-theme') === theme) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Устанавливаем активное состояние при загрузке
+            themeSwitchers.forEach(item => {
+                if (item.getAttribute('data-theme') === savedTheme) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
