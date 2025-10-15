@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Dota 2 Магазин</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 120px;
+            object-fit: contain;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Dota 2 Магазин</h1>
+                        <p class="mb-0 opacity-75">Лучшие предметы для побед</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">Dota 2</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Products Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h2 class="card-title h4 mb-0">
+                            <i class="bi bi-grid-3x3-gap text-primary"></i>
+                            Каталог товаров
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- Hand of Midas -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="card product-card h-100 border-warning">
+                                    <div class="card-body text-center">
+                                        <img src="../images/i1.png" alt="Hand of Midas" class="product-image w-100">
+                                        <h5 class="card-title mt-3">Hand of Midas</h5>
+                                        <p class="card-text text-muted">Превращает обычного крипа в золото</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-warning mb-0">2200 золота</span>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="bi bi-cart-plus"></i> Купить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Black King Bar -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="card product-card h-100 border-danger">
+                                    <div class="card-body text-center">
+                                        <img src="../images/i2.png" alt="Black King Bar" class="product-image w-100">
+                                        <h5 class="card-title mt-3">Black King Bar</h5>
+                                        <p class="card-text text-muted">Иммунитет к заклинаниям</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-warning mb-0">4050 золота</span>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="bi bi-cart-plus"></i> Купить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blink Dagger -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="card product-card h-100 border-info">
+                                    <div class="card-body text-center">
+                                        <img src="../images/i3.png" alt="Blink Dagger" class="product-image w-100">
+                                        <h5 class="card-title mt-3">Blink Dagger</h5>
+                                        <p class="card-text text-muted">Мгновенное перемещение</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-warning mb-0">2250 золота</span>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="bi bi-cart-plus"></i> Купить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Divine Rapier -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="card product-card h-100 border-light">
+                                    <div class="card-body text-center bg-dark text-white">
+                                        <img src="../images/i4.png" alt="Divine Rapier" class="product-image w-100">
+                                        <h5 class="card-title mt-3 text-warning">Divine Rapier</h5>
+                                        <p class="card-text">Огромный урон, но можно потерять</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-warning mb-0">5950 золота</span>
+                                            <button class="btn btn-warning btn-sm">
+                                                <i class="bi bi-cart-plus"></i> Купить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Aghanim's Scepter -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="card product-card h-100 border-primary">
+                                    <div class="card-body text-center">
+                                        <img src="../images/i5.png" alt="Aghanim's Scepter" class="product-image w-100">
+                                        <h5 class="card-title mt-3">Aghanim's Scepter</h5>
+                                        <p class="card-text text-muted">Улучшает способности</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-warning mb-0">4200 золота</span>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="bi bi-cart-plus"></i> Купить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Heart of Tarrasque -->
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="card product-card h-100 border-success">
+                                    <div class="card-body text-center">
+                                        <img src="../images/i6.png" alt="Heart of Tarrasque" class="product-image w-100">
+                                        <h5 class="card-title mt-3">Heart of Tarrasque</h5>
+                                        <p class="card-text text-muted">Максимальное здоровье и регенерация</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 text-warning mb-0">5000 золота</span>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="bi bi-cart-plus"></i> Купить
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 ЭТО МОЙ САЙТ! Мои права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
