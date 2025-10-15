@@ -3,40 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио - Кондратенко Денис</title>
+    <title>Главная - Портфолио</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
-    <div class="page page--light" data-theme="light">
-        <!-- Переключатель темы -->
-        <div class="theme-switcher">
-            <button class="theme-switcher__button" aria-label="Переключить тему">
-                <span class="theme-switcher__icon"></span>
-            </button>
-        </div>
-
-        <!-- Шапка -->
+    <div class="page-container">
         <header class="header">
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item nav__item--active">
-                        <a class="nav__link" href="index.html">Главная</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="pages/news.html">Новости</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="pages/goods.html">Товары</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="pages/contacts.html">Контакты</a>
-                    </li>
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="pages/news.html">Новости</a></li>
+                    <li class="nav__item"><a class="nav__link" href="pages/goods.html">Товары</a></li>
+                    <li class="nav__item"><a class="nav__link" href="pages/contacts.html">Контакты</a></li>
                 </ul>
             </nav>
             <h1 class="header__title">Портфолио</h1>
         </header>
 
-        <!-- Основной контент -->
         <main class="main">
             <!-- Профиль -->
             <section class="profile">
@@ -75,7 +58,7 @@
                     <div class="skill skill--accent">
                         <span class="skill__name">Навык 3</span>
                     </div>
-                    <div class="skill skill--primary">
+                    <div class="skill skill--warning">
                         <span class="skill__name">Навык 4</span>
                     </div>
                 </div>
@@ -87,7 +70,7 @@
                 <div class="experience__grid">
                     <article class="experience-card">
                         <h3 class="experience-card__title">Опыт 1</h3>
-                        <p class="experience-card__description">Работал во вкусно и точка.</p>
+                        <p class="experience-card__description">Работал во вкусно и точке.</p>
                     </article>
                     <article class="experience-card">
                         <h3 class="experience-card__title">Опыт 2</h3>
@@ -101,27 +84,42 @@
             </section>
         </main>
 
-        <!-- Подвал -->
         <footer class="footer">
             <p class="footer__text">&copy; ЭТО МОЙ САЙТ. Мои права защищены.</p>
         </footer>
     </div>
 
+    <!-- Переключатель темы -->
     <script>
-        // Переключение темы
         document.addEventListener('DOMContentLoaded', function() {
-            const themeSwitcher = document.querySelector('.theme-switcher__button');
-            const page = document.querySelector('.page');
+            // Создаем переключатель темы если его нет
+            if (!document.querySelector('.theme-switcher')) {
+                const themeSwitcher = document.createElement('div');
+                themeSwitcher.className = 'theme-switcher';
+                themeSwitcher.innerHTML = `
+                    <button class="theme-switcher__button" aria-label="Переключить тему">
+                        <span class="theme-switcher__icon"></span>
+                    </button>
+                `;
+                document.body.appendChild(themeSwitcher);
+            }
+
+            const themeButton = document.querySelector('.theme-switcher__button');
+            const pageContainer = document.querySelector('.page-container');
             
-            themeSwitcher.addEventListener('click', function() {
-                if (page.classList.contains('page--light')) {
-                    page.classList.remove('page--light');
-                    page.classList.add('page--dark');
-                    page.setAttribute('data-theme', 'dark');
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                pageContainer.setAttribute('data-theme', 'dark');
+            }
+
+            themeButton.addEventListener('click', function() {
+                if (pageContainer.getAttribute('data-theme') === 'dark') {
+                    pageContainer.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
                 } else {
-                    page.classList.remove('page--dark');
-                    page.classList.add('page--light');
-                    page.setAttribute('data-theme', 'light');
+                    pageContainer.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
                 }
             });
         });
