@@ -10,111 +10,111 @@
     <div class="page-container">
         <header class="header">
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
-            <h1>Товары</h1>
+            <h1 class="header__title">Товары Dota 2</h1>
         </header>
 
-        <main class="content">
-            <section class="products-section">
-                <h2 class="section-title">Каталог товаров</h2>
+        <main class="main">
+            <section class="products">
+                <h2 class="products__title">Каталог товаров</h2>
                 
-                <div class="products-grid">
+                <div class="products__grid">
                     <article class="product-card">
-                        <div class="product-image">
+                        <div class="product-card__image">
                             <img src="../images/i1.png" alt="Hand of Midas">
                         </div>
-                        <h3 class="product-name">Hand of Midas</h3>
-                        <div class="product-price">2200 золота</div>
+                        <h3 class="product-card__name">Hand of Midas</h3>
+                        <div class="product-card__price">2200 золота</div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image">
+                        <div class="product-card__image">
                             <img src="../images/i2.png" alt="Black King Bar">
                         </div>
-                        <h3 class="product-name">Black King Bar</h3>
-                        <div class="product-price">4050 золота</div>
+                        <h3 class="product-card__name">Black King Bar</h3>
+                        <div class="product-card__price">4050 золота</div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image">
+                        <div class="product-card__image">
                             <img src="../images/i3.png" alt="Blink Dagger">
                         </div>
-                        <h3 class="product-name">Blink Dagger</h3>
-                        <div class="product-price">2250 золота</div>
+                        <h3 class="product-card__name">Blink Dagger</h3>
+                        <div class="product-card__price">2250 золота</div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image">
+                        <div class="product-card__image">
                             <img src="../images/i4.png" alt="Divine Rapier">
                         </div>
-                        <h3 class="product-name">Divine Rapier</h3>
-                        <div class="product-price">5950 золота</div>
+                        <h3 class="product-card__name">Divine Rapier</h3>
+                        <div class="product-card__price">5950 золота</div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image">
+                        <div class="product-card__image">
                             <img src="../images/i5.png" alt="Aghanim's Scepter">
                         </div>
-                        <h3 class="product-name">Aghanim's Scepter</h3>
-                        <div class="product-price">4200 золота</div>
+                        <h3 class="product-card__name">Aghanim's Scepter</h3>
+                        <div class="product-card__price">4200 золота</div>
                     </article>
 
                     <article class="product-card">
-                        <div class="product-image">
+                        <div class="product-card__image">
                             <img src="../images/i6.png" alt="Heart of Tarrasque">
                         </div>
-                        <h3 class="product-name">Heart of Tarrasque</h3>
-                        <div class="product-price">5000 золота</div>
+                        <h3 class="product-card__name">Heart of Tarrasque</h3>
+                        <div class="product-card__price">5000 золота</div>
                     </article>
                 </div>
             </section>
         </main>
 
         <footer class="footer">
-            <p>&copy; ЭТО МОЙ САЙТ! Мои права защищены.</p>
+            <p class="footer__text">&copy; ЭТО МОЙ САЙТ! Мои права защищены.</p>
         </footer>
     </div>
-</body>
-<!-- Добавьте этот код перед закрывающим тегом </body> на всех страницах -->
-<script>
-    // Переключатель темы
-    document.addEventListener('DOMContentLoaded', function() {
-        // Создаем переключатель темы если его нет
-        if (!document.querySelector('.theme-switcher')) {
-            const themeSwitcher = document.createElement('div');
-            themeSwitcher.className = 'theme-switcher';
-            themeSwitcher.innerHTML = `
-                <button class="theme-switcher__button" aria-label="Переключить тему">
-                    <span class="theme-switcher__icon"></span>
-                </button>
-            `;
-            document.body.appendChild(themeSwitcher);
-        }
 
-        const themeButton = document.querySelector('.theme-switcher__button');
-        const pageContainer = document.querySelector('.page-container');
-        
-        // Проверяем сохраненную тему
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        if (savedTheme === 'dark') {
-            pageContainer.setAttribute('data-theme', 'dark');
-        }
-
-        themeButton.addEventListener('click', function() {
-            if (pageContainer.getAttribute('data-theme') === 'dark') {
-                pageContainer.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-            } else {
-                pageContainer.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
+    <!-- Переключатель темы -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Создаем переключатель темы если его нет
+            if (!document.querySelector('.theme-switcher')) {
+                const themeSwitcher = document.createElement('div');
+                themeSwitcher.className = 'theme-switcher';
+                themeSwitcher.innerHTML = `
+                    <button class="theme-switcher__button" aria-label="Переключить тему">
+                        <span class="theme-switcher__icon"></span>
+                    </button>
+                `;
+                document.body.appendChild(themeSwitcher);
             }
+
+            const themeButton = document.querySelector('.theme-switcher__button');
+            const pageContainer = document.querySelector('.page-container');
+            
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                pageContainer.setAttribute('data-theme', 'dark');
+            }
+
+            themeButton.addEventListener('click', function() {
+                if (pageContainer.getAttribute('data-theme') === 'dark') {
+                    pageContainer.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    pageContainer.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
         });
-    });
-</script>
+    </script>
+</body>
 </html>

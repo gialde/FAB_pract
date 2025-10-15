@@ -10,97 +10,99 @@
     <div class="page-container">
         <header class="header">
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="news.html">Новости</a></li>
+                    <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
-            <h1>Dota 2 News Portal</h1>
+            <h1 class="header__title">Dota 2 News Portal</h1>
         </header>
 
-        <main class="content">
-            <section class="news-section">
-                <h2 class="section-title">Свежие новости из мира Dota 2</h2>
+        <main class="main">
+            <section class="news">
+                <h2 class="news__title">Свежие новости из мира Dota 2</h2>
                 
-                <article class="news-article">
-                    <h3 class="news-title">Valve тизерит новое глобальное обновление Dota 2</h3>
-                    <div class="news-meta">
-                        <time datetime="2025-10-07">7 октября 2025</time> | Автор: Dota News Team
-                    </div>
-                    <div class="news-text">
-                        <p>По инсайдам из Reddit, Valve готовит масштабный апдейт, который может полностью изменить мету. 
-                           Игроки ожидают переработку карты, новые айтемы и, возможно, возвращение Diretide в постоянный режим.</p>
-                        <p>IceFrog, как обычно, никак не прокомментировал ситуацию, но фанаты уверены — шторм над Dota приближается.</p>
-                    </div>
-                </article>
+                <div class="news__list">
+                    <article class="news-item">
+                        <h3 class="news-item__title">Valve тизерит новое глобальное обновление Dota 2</h3>
+                        <div class="news-item__meta">
+                            <time datetime="2025-10-07">7 октября 2025</time> | Автор: Dota News Team
+                        </div>
+                        <div class="news-item__text">
+                            <p>По инсайдам из Reddit, Valve готовит масштабный апдейт, который может полностью изменить мету. 
+                               Игроки ожидают переработку карты, новые айтемы и, возможно, возвращение Diretide в постоянный режим.</p>
+                            <p>IceFrog, как обычно, никак не прокомментировал ситуацию, но фанаты уверены — шторм над Dota приближается.</p>
+                        </div>
+                    </article>
 
-                <article class="news-article">
-                    <h3 class="news-title">Комьюнити спорит: кто сильнее — Invoker или Storm Spirit?</h3>
-                    <div class="news-meta">
-                        <time datetime="2025-10-06">6 октября 2025</time> | Автор: Esports Analyst
-                    </div>
-                    <div class="news-text">
-                        <p>На форуме Reddit разгорелся спор о том, кто лучший мид — Invoker или Storm. 
-                           По результатам опроса: 48% за Инвокера, 46% за Шторма, и 6% выбрали "Tinker, потому что раздражает всех".</p>
-                        <p>В комментариях пользователи отмечают, что "всё решает, кто первый купит BKB и кто играет за Radiant".</p>
-                    </div>
-                </article>
+                    <article class="news-item">
+                        <h3 class="news-item__title">Комьюнити спорит: кто сильнее — Invoker или Storm Spirit?</h3>
+                        <div class="news-item__meta">
+                            <time datetime="2025-10-06">6 октября 2025</time> | Автор: Esports Analyst
+                        </div>
+                        <div class="news-item__text">
+                            <p>На форуме Reddit разгорелся спор о том, кто лучший мид — Invoker или Storm. 
+                               По результатам опроса: 48% за Инвокера, 46% за Шторма, и 6% выбрали "Tinker, потому что раздражает всех".</p>
+                            <p>В комментариях пользователи отмечают, что "всё решает, кто первый купит BKB и кто играет за Radiant".</p>
+                        </div>
+                    </article>
 
-                <article class="news-article">
-                    <h3 class="news-title">Roshan замечен за пределами ямы — баг или новый ивент?</h3>
-                    <div class="news-meta">
-                        <time datetime="2025-10-05">5 октября 2025</time> | Автор: GameLeaks.ru
-                    </div>
-                    <div class="news-text">
-                        <p>Несколько игроков опубликовали скриншоты, где Рошан бродит по карте, нападая на крипов и героев. 
-                           Valve уже в курсе и заявила, что "это не баг, это фича".</p>
-                        <p>Некоторые уверены, что это тизер к новому ивенту Halloween 2025 — "Побег Рошана".</p>
-                    </div>
-                </article>
+                    <article class="news-item">
+                        <h3 class="news-item__title">Roshan замечен за пределами ямы — баг или новый ивент?</h3>
+                        <div class="news-item__meta">
+                            <time datetime="2025-10-05">5 октября 2025</time> | Автор: GameLeaks.ru
+                        </div>
+                        <div class="news-item__text">
+                            <p>Несколько игроков опубликовали скриншоты, где Рошан бродит по карте, нападая на крипов и героев. 
+                               Valve уже в курсе и заявила, что "это не баг, это фича".</p>
+                            <p>Некоторые уверены, что это тизер к новому ивенту Halloween 2025 — "Побег Рошана".</p>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
 
         <footer class="footer">
-            <p>&copy; ЭТО МОЙ САЙТ. Мои права защищены.</p>
+            <p class="footer__text">&copy; ЭТО МОЙ САЙТ. Мои права защищены.</p>
         </footer>
     </div>
-</body>
-<!-- Добавьте этот код перед закрывающим тегом </body> на всех страницах -->
-<script>
-    // Переключатель темы
-    document.addEventListener('DOMContentLoaded', function() {
-        // Создаем переключатель темы если его нет
-        if (!document.querySelector('.theme-switcher')) {
-            const themeSwitcher = document.createElement('div');
-            themeSwitcher.className = 'theme-switcher';
-            themeSwitcher.innerHTML = `
-                <button class="theme-switcher__button" aria-label="Переключить тему">
-                    <span class="theme-switcher__icon"></span>
-                </button>
-            `;
-            document.body.appendChild(themeSwitcher);
-        }
 
-        const themeButton = document.querySelector('.theme-switcher__button');
-        const pageContainer = document.querySelector('.page-container');
-        
-        // Проверяем сохраненную тему
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        if (savedTheme === 'dark') {
-            pageContainer.setAttribute('data-theme', 'dark');
-        }
-
-        themeButton.addEventListener('click', function() {
-            if (pageContainer.getAttribute('data-theme') === 'dark') {
-                pageContainer.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-            } else {
-                pageContainer.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
+    <!-- Переключатель темы -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Создаем переключатель темы если его нет
+            if (!document.querySelector('.theme-switcher')) {
+                const themeSwitcher = document.createElement('div');
+                themeSwitcher.className = 'theme-switcher';
+                themeSwitcher.innerHTML = `
+                    <button class="theme-switcher__button" aria-label="Переключить тему">
+                        <span class="theme-switcher__icon"></span>
+                    </button>
+                `;
+                document.body.appendChild(themeSwitcher);
             }
+
+            const themeButton = document.querySelector('.theme-switcher__button');
+            const pageContainer = document.querySelector('.page-container');
+            
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                pageContainer.setAttribute('data-theme', 'dark');
+            }
+
+            themeButton.addEventListener('click', function() {
+                if (pageContainer.getAttribute('data-theme') === 'dark') {
+                    pageContainer.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    pageContainer.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
         });
-    });
-</script>
+    </script>
+</body>
 </html>
